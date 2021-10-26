@@ -208,12 +208,11 @@ class MCMC:
 	def loglikelihood(self, neuralnet, data, w, tausq): 
 
 		if self.prob == 'regression':
-			loglhood = self.gaussian_loglikelihood(neuralnet, data, w, tausq)
+			[log_lhood, prediction, perf] = self.gaussian_loglikelihood(neuralnet, data, w, tausq)
 		elif self.prob == 'classification':
-			loglhood = self.multinomial_loglikelihood(neuralnet, data, w)
+			[log_lhood, prediction, perf] = self.multinomial_loglikelihood(neuralnet, data, w)
 
-		return loglhood 
-
+		return [log_lhood, prediction, perf]
 
 	def prior(self, sigma_squared, nu_1, nu_2, w, tausq): 
 
@@ -223,7 +222,6 @@ class MCMC:
 			logprior = self.prior_classification(sigma_squared, nu_1, nu_2, w)
 
 		return logprior
-
 
 	def gaussian_loglikelihood(self, neuralnet, data, w, tausq): 
 
