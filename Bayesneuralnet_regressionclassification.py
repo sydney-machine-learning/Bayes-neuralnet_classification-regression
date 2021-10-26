@@ -6,20 +6,11 @@
 # Reference for publication for this code
 # [Chandra_ICONIP2017] R. Chandra, L. Azizi, S. Cripps, 'Bayesian neural learning via Langevin dynamicsfor chaotic time series prediction', ICONIP 2017. 
 
+#https://github.com/sydney-machine-learning/parallel-tempering-neural-net
+#Chandra R; Jain K; Deo RV; Cripps S, 2019, 'Langevin-gradient parallel tempering for Bayesian neural learning', 
+#Neurocomputing, vol. 359, pp. 315 - 326, http://dx.doi.org/10.1016/j.neucom.2019.05.082, 
 
-
-
-
-'''import matplotlib.pyplot as plt
-import numpy as np
-import random
-import time
-from scipy.stats import multivariate_normal
-from scipy.stats import norm
-import math
-import os'''
-
-
+ 
 
 import numpy as np
 import random
