@@ -567,13 +567,13 @@ def main():
 		pos_w = pos_w[int(burnin):, ]
 		pos_tau = pos_tau[int(burnin):, ]
 
-		fx_mu = fx_test.mean(axis=0)
-		fx_high = np.percentile(fx_test, 95, axis=0)
-		fx_low = np.percentile(fx_test, 5, axis=0)
+		fx_mu = fx_test[int(burnin):,].mean(axis=0)
+		fx_high = np.percentile(fx_test[int(burnin):,], 95, axis=0)
+		fx_low = np.percentile(fx_test[int(burnin):,], 5, axis=0)
 
-		fx_mu_tr = fx_train.mean(axis=0)
-		fx_high_tr = np.percentile(fx_train, 95, axis=0)
-		fx_low_tr = np.percentile(fx_train, 5, axis=0)
+		fx_mu_tr = fx_train[int(burnin):,].mean(axis=0)
+		fx_high_tr = np.percentile(fx_train[int(burnin):,], 95, axis=0)
+		fx_low_tr = np.percentile(fx_train[int(burnin):,], 5, axis=0)
 
 		pos_w_mean = pos_w.mean(axis=0) 
 
