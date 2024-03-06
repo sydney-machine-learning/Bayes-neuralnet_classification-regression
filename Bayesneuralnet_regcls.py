@@ -526,8 +526,8 @@ def main():
 				features[:,k] = (features[:,k]-mean)/dev
 			train_ratio = 0.7 #choose
 			indices = np.random.permutation(features.shape[0])
-			traindata = np.hstack([features[indices[:np.int(train_ratio*features.shape[0])],:],classes[indices[:np.int(train_ratio*features.shape[0])],:]])
-			testdata = np.hstack([features[indices[np.int(train_ratio*features.shape[0])]:,:],classes[indices[np.int(train_ratio*features.shape[0])]:,:]])
+			traindata = np.hstack([features[indices[:np.int_(train_ratio*features.shape[0])],:],classes[indices[:np.int_(train_ratio*features.shape[0])],:]])
+			testdata = np.hstack([features[indices[np.int_(train_ratio*features.shape[0])]:,:],classes[indices[np.int_(train_ratio*features.shape[0])]:,:]])
 			prob_type = 'classification'
  
 
